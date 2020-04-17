@@ -32,13 +32,6 @@
                         "link": "/nexus/"
                     },
                     {
-                        "id": "kibana",
-                        "title": "kibana",
-                        "img": "img/kibana.png",
-                        "description": "Kibana Dashboard for Logging (ELK)",
-                        "link": "/app/kibana"
-                    },
-                    {
                         "id": "selenium",
                         "title": "selenium",
                         "img": "img/selenium.png",
@@ -48,13 +41,6 @@
                             "host": "selenium",
                             "endPath": "//grid/console"
                         }
-                    },
-                    {
-                        "id": "sensu",
-                        "title": "sensu",
-                        "img": "img/sensu.png",
-                        "description": "Monitoring",
-                        "link": "/sensu/"
                     },
                     {
                         "id": "ldap-ltb",

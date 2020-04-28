@@ -9,6 +9,8 @@ cp -R /resources/release_note/* /usr/share/nginx/html/
 
 # Copy and replace tokens
 perl -p -i -e 's/###([^#]+)###/defined $ENV{$1} ? $ENV{$1} : $&/eg' < "/templates/configuration/nginx.conf" 2> /dev/null 1> "/etc/nginx/nginx.conf"
+perl -p -i -e 's/###([^#]+)###/defined $ENV{$1} ? $ENV{$1} : $&/eg' < "/templates/configuration/tools-context.conf" 2> /dev/null 1> "/resources/configuration/sites-enabled/tools-context.conf"
+cp -f /resources/configuration/sites-enabled/tools-context.conf /etc/nginx/sites-enabled/tools-context.conf
 
 # wait for all downstream services to be up and running
 # This is a temporary solution that allows NGINX to wait for all dependencies and after start, this should be removed when 
